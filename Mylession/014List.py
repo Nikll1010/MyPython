@@ -11,6 +11,9 @@ e = tuple("i love you")
 print(e)
 f = tuple([1, 2, 3, 4, 5, 6, 7])
 print(f)
+j = 'i', ' ', 'l', 'o', 'v', 'e'
+print(j)
+print(len(j))
 '''------------'''
 g = str()
 print(type(g))
