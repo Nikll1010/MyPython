@@ -1,7 +1,7 @@
 def get_salt():
-    '''
+    """
     :return:
-    '''
+    """
     import random, time
 
     salt = int(time.time() * 1000) + random.randint(0, 10)
@@ -30,6 +30,7 @@ def get_sign(key, salt):
 
 
 from urllib import request, parse
+import json
 
 
 def youdao(key):
@@ -77,6 +78,9 @@ def youdao(key):
 
     html = rsp.read().decode()
     print(html)
+    answer = json.loads(html)
+    print(type(answer))
+    print(answer['translateResult'][0][0]['tgt'])
 
 
 if __name__ == '__main__':
