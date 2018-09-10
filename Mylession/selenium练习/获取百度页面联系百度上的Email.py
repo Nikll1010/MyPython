@@ -7,7 +7,7 @@ import urllib.request
 
 driver = selenium.webdriver.Firefox()
 # driver.maximize_window()
-
+driver.implicitly_wait(6)
 driver.get("http://home.baidu.com/home/index/contact_us")
 '''
 content = driver.find_element_by_xpath("/html/body/div[1]/div[4]/div/div[1]/div[7]/div/div[1]/div[1]").text
