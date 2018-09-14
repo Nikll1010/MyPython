@@ -27,6 +27,7 @@ driver.maximize_window()
 driver.implicitly_wait(8)
 driver.get(url='https://www.jd.com/')
 driver.find_element_by_xpath('//*[@id="key"]').send_keys('手机')  # 搜索框输入selenium
+driver.find_element_by_xpath('//*[@id="key"]').clear()
 driver.find_element_by_xpath('/html/body/div[1]/div[3]/div/div[2]/div/div[2]/button').click()  # 点击百度按钮
 
 time.sleep(2)  # 等待两秒
