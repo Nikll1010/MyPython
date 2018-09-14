@@ -11,10 +11,8 @@ driver.find_element_by_id("kw").send_keys("lalala")
 time .sleep(5)
 driver.implicitly_wait(100)
 try:
-    driver.implicitly_wait(100)
-    driver.find_element_by_id("kw").clear()
-    driver.implicitly_wait(100)
     driver.find_element_by_id("su").click()
-    print("test pass,clean successful")
+    driver.refresh()
+    print("test pass,refresh successful")
 except Exception as e:
     print("Exception fonud", format(e))
