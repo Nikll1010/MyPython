@@ -21,3 +21,4 @@ for i in driver.find_elements_by_class_name('search-radios'):
     print(i.text)
     print(type(i))
     print(i)
+driver.quit()
