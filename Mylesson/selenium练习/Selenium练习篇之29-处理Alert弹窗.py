@@ -11,5 +11,9 @@ driver.set_window_position(500, 100)
 driver.get('https://www.126.com')
 time.sleep(3)
 
-driver.switch_to.frame("x-URS-iframe")  # 切换到iframe，若无此行代码，则找不到帐号输入框
-driver.find_element_by_xpath("//*[@class='j-inputtext dlemail']").send_keys("selenium switch test")  # 在帐号输入框内输入
+driver.execute_script('window.alert("这是一个测试alter弹窗")')
+time.sleep(3)
+
+# assert isinstance(driver.switch_to_alert().accept, object)
+# noinspection PyDeprecation
+driver.switch_to.alert.accept()  # 点击alter弹出框的确定按钮

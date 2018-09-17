@@ -8,8 +8,14 @@ driver = webdriver.Firefox()
 driver.implicitly_wait(10)
 driver.set_window_size(1024, 768)
 driver.set_window_position(500, 100)
-driver.get('https://www.126.com')
+driver.get('http://news.baidu.com')
 time.sleep(3)
 
-driver.switch_to.frame("x-URS-iframe")  # 切换到iframe，若无此行代码，则找不到帐号输入框
-driver.find_element_by_xpath("//*[@class='j-inputtext dlemail']").send_keys("selenium switch test")  # 在帐号输入框内输入
+for image in driver.find_elements_by_tag_name("img"):
+    print(image.text)
+    print(image.size)
+    print(image.tag_name)
+
+
+print(driver.find_elements_by_tag_name('img'))
+
